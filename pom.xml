@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<!-- To download AWS SDK file run 'mvn process-sources' -->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.connectivitywise.connect</groupId>
+	<groupId>com.ssrowe.connect</groupId>
 	<artifactId>connect-docker</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
-	<name>ConnectivityWise Connect Docker Java Dependencies</name>
+	<name>Connect Docker Java Dependencies</name>
 	<dependencies>
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
