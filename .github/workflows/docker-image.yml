@@ -10,7 +10,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   MIRTH_DOWNLOAD: https://s3.amazonaws.com/downloads.mirthcorp.com/connect/4.2.0.b2825/mirthconnect-4.2.0.b2825-unix.tar.gz
-  VERSION: minor=4.2.0
+  VERSION: 4.2.0
 
 jobs:
   build-and-push-image:
