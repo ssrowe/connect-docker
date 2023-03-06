@@ -44,3 +44,4 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+        build-args: ARTIFACT=https://s3.amazonaws.com/downloads.mirthcorp.com/connect/4.2.0.b2825/mirthconnect-4.2.0.b2825-unix.tar.gz
