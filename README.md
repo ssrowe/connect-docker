@@ -18,6 +18,16 @@
 
 ------------
 
+<a name="overview"></a>
+# Overview [↑](#top)
+This repo includes a GitHub Action and Maven script to download additional AWS SDK components and create a custom Docker image.  The image is then pushed to the GitHub Container registry.
+
+Currently, the follow additional AWS SDK files are included in the Docker image:
+* dynamodb-2.15.28.jar
+* eventbridge-2.15.28.jar
+* sqs-2.15.28.jar
+* ssm-2.15.28.jar
+
 <a name="supported-tags"></a>
 # Supported tags and respective Dockerfile links [↑](#top)
 
