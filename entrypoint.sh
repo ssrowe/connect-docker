@@ -15,6 +15,11 @@ sed -i "s/^keystore\.storepass\s*=\s*.*\$/keystore.storepass = ${KEYSTORE_PASS//
 sed -i "s/^keystore\.keypass\s*=\s*.*\$/keystore.keypass = ${KEYSTORE_PASS//\//\\/}/" /opt/connect/conf/mirth.properties
 
 # merge the environment variables into /opt/connect/conf/mirth.properties
+# server id
+if ! [ -z "${SERVER_ID+x}" ]; then
+	echo "server.id = ${SERVER_ID//\//\\/}" > /opt/connect/appdata/server.id
+fi
+
 # db type
 if ! [ -z "${DATABASE+x}" ]; then
 	sed -i "s/^database\s*=\s*.*\$/database = ${DATABASE//\//\\/}/" /opt/connect/conf/mirth.properties
