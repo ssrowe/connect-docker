@@ -10,6 +10,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   MIRTH_DOWNLOAD: https://s3.amazonaws.com/downloads.mirthcorp.com/connect/4.2.0.b2825/mirthconnect-4.2.0.b2825-unix.tar.gz
+  VERSION: minor=4.2.0
 
 jobs:
   build-and-push-image:
@@ -43,6 +44,8 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ steps.meta.outputs.tags }}
+        tags: |
+          ${{ steps.meta.outputs.tags }}
+          ${{ env.VERSION }}
         labels: ${{ steps.meta.outputs.labels }}
         build-args: ARTIFACT=${{ env.MIRTH_DOWNLOAD }}
